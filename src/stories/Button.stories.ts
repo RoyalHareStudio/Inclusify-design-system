@@ -28,13 +28,15 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     isPrimary: true,
-    buttonText: 'Button',
+    buttonText: 'Sample Button',
+    id: 'button-primary-storybook-test'
   },
 };
 
 export const Secondary: Story = {
   args: {
     isPrimary: false,
-    buttonText: 'Button',
+    buttonText: 'Sample Button',
+    id: 'button-secondary-storybook-test'
   },
 };

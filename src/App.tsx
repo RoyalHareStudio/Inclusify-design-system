@@ -5,7 +5,7 @@ export default function App() {
     return (
         <>
             <p>sample</p>
-            <CButton  buttonText="Sample Button"/>
+            <CButton buttonText="Sample Button"/>
         </>
     );
 }

@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -21,18 +21,23 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
-      - name: Install Playwright browsers
+      - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
-        run: npx playwright test
+      - name: Build Design System
+        run: npm run build
 
-      - name: Upload test report (if failed)
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: playwright-report/
+      - name: Start Storybook
+        run: npm run storybook -- --ci & # Runs Storybook in the background
+        env:
+          CI: true
+
+      - name: Wait for Storybook to Start
+        run: sleep 10 # Give Storybook time to start
+
+      - name: Run Accessibility Tests
+        run: npx playwright test tests/accessibility.test.js
+
