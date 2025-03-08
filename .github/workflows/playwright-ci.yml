@@ -39,5 +39,5 @@ jobs:
         run: sleep 10 # Give Storybook time to start
 
       - name: Run Accessibility Tests
-        run: npx playwright test tests/accessibility.test.js
+        run: npx playwright test
 
