@@ -29,13 +29,17 @@
   "scripts": {
     "start": "webpack serve --production",
     "build": "webpack",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook -p 6006",
+    "build-storybook": "storybook build",
+    "test-storybook": "storybook -p 6006 & wait-on http://localhost:6006 && playwright test"
   },
   "dependencies": {
     "@axe-core/playwright": "^4.10.1",
+    "concurrently": "^9.1.2",
+    "http-server": "^14.1.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "wait-on": "^8.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.26.9",
