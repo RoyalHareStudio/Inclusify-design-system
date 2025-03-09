@@ -31,7 +31,8 @@
     "build": "webpack",
     "storybook": "storybook -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "storybook -p 6006 & wait-on http://localhost:6006 && playwright test"
+    "test-storybook": "storybook -p 6006 & wait-on http://localhost:6006 && playwright test",
+    "deploy-storybook": "storybook deploy"
   },
   "dependencies": {
     "@axe-core/playwright": "^4.10.1",
@@ -55,6 +56,7 @@
     "@storybook/blocks": "^8.6.4",
     "@storybook/react": "^8.6.4",
     "@storybook/react-webpack5": "^8.6.4",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/test": "^8.6.4",
     "@types/node": "^22.13.9",
     "@types/react": "^19.0.10",
@@ -74,6 +76,10 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "storybook": {
+    "staticDirs": ["public"],
+    "outputDir": "storybook-static"
   },
   "browserslist": {
     "production": [
