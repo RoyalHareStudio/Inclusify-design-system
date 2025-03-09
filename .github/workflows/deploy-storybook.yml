@@ -23,4 +23,4 @@ jobs:
         run: npm run build-storybook
 
       - name: Deploy to GitHub Pages
-        run: npm run deploy-storybook
+        run: npm run deploy-storybook -- --ci
