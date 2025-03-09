@@ -1,0 +1,23 @@
+:root {
+    /* Primary Colors */
+    --color-primary-dark: #003366;
+    --color-primary: #007AFF;
+    --color-primary-light: #A3DAFF;
+  
+    /* Secondary Colors */
+    --color-success: #008F5D;
+    --color-warning: #FFC72C;
+    --color-error: #E63946;
+  
+    /* Neutral Colors */
+    --color-white: #FFFFFF;
+    --color-gray-light: #F2F2F2;
+    --color-gray-dark: #333333;
+    --color-black: #1A1A1A;
+  
+    /* Accessibility Considerations */
+    --color-text-default: var(--color-gray-dark);
+    --color-text-inverted: var(--color-white);
+    --color-bg-default: var(--color-white);
+    --color-bg-dark: var(--color-black);
+  }

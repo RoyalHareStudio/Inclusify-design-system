@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 import WSection from '../wrapper/WSection';
+import TestSubcomponents from './utilities/test-subcomponents';
+import React from 'react';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -19,10 +21,10 @@ const meta = {
   type Story = StoryObj<typeof meta>;
   
   // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-  export const Primary: Story = {
+  export const Default: Story = {
     args: {
-      sectionLabelledById: 'sampleSection',
-      id: 'section-primary-storybook-test'
-      // children: {<div><h2 id={sectionLabelledById}>Heading</h2><p>Clear</p></div>};
+      sectionLabelledById: 'testSubcomponents-heading',
+      id: 'section-default-storybook-test',
+      children: <TestSubcomponents />
     },
-  };
+  }
