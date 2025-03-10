@@ -21,10 +21,20 @@ const meta = {
   type Story = StoryObj<typeof meta>;
   
   // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-  export const Default: Story = {
+  export const RoleisMain: Story = {
     args: {
       sectionLabelledById: 'testSubcomponents-heading',
-      id: 'section-default-storybook-test',
-      children: <TestSubcomponents />
+      id: 'section-roleismain-storybook-test',
+      children: <TestSubcomponents />,
+      role: "main",
+    },
+  }
+
+  export const RoleisRegion: Story = {
+    args: {
+      sectionLabelledById: 'testSubcomponents-heading',
+      id: 'section-roleisregion-storybook-test',
+      children: <TestSubcomponents />,
+      role: "region",
     },
   }
