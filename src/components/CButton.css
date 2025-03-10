@@ -1,0 +1,11 @@
+@import "../Colors.css";
+
+button.button-primary{
+    background-color: var(--color-primary);
+}
+
+button.button-secondary{
+    background-color: var(--color-primary-light);
+}
+
+button.button-disabled{}

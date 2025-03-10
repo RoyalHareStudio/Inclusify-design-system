@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './CButton.css';
 
 export interface CButtonInterface{
     buttonText: string,
@@ -13,6 +14,7 @@ const CButton = ({buttonText, isPrimary = false, onClick = () => {}, backgroundC
         <button 
             id={id}
             onClick={onClick}
+            className={isPrimary ? 'button-primary' : 'button-secondary' }
             data-testId={id}
             style={{ backgroundColor }}>
                 {buttonText}
