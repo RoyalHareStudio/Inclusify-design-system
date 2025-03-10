@@ -2,7 +2,7 @@ import { test, expect} from '@playwright/test';
 
 test.describe('Section Component', () => {
     test.beforeEach( async ({ page }) => {
-        const websiteLink = 'Inclusify-design-system/iframe.html?globals=&args=&id=wrapper-section--roleismain&viewMode=story';
+        const websiteLink = 'Inclusify-design-system/iframe.html?globals=&args=&id=wrapper-section--roleis-main&viewMode=story';
 
         await page.goto(websiteLink);
     });
